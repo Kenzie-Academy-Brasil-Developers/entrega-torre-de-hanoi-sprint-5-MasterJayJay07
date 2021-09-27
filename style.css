@@ -1,0 +1,48 @@
+/* torres para inserir os discos */
+#torres{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.torre {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: black;
+    width: 10px;
+    height: 100px;
+    margin: 40px;
+}
+.torre::after {
+    content: "  ";
+}
+
+
+/* discos */
+.disco {
+    border-radius: 5px;
+}
+.disco::after {
+    content: "#";
+}
+.dVermelho{ 
+    background-color: red;
+    color: red;
+    width: 80px;
+}
+.dVerde{ 
+    background-color: green;
+    color: green;
+    width: 70px;
+}
+.dAzul{ 
+    background-color: blue;
+    color: blue;
+    width: 60px
+}
+.dAmarelo{ 
+    background-color: yellow;
+    color: yellow;
+    width: 50px;
+}
