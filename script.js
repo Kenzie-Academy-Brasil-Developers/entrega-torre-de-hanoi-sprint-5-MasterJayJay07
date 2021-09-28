@@ -10,29 +10,25 @@ const greenDisk = document.querySelector(".dVerde")
 const blueDisk = document.querySelector(".dAzul")
 const yellowDisk = document.querySelector(".dAmarelo")
 
+//função para descobrir a torre clicada
+function descobrirTorre(e){
+    let torreAtual = e.currentTarget
+    console.log(e.currentTarget)
+    return torreAtual
+}
+tower1.addEventListener("click", descobrirTorre(tower1))
+tower2.addEventListener("click", descobrirTorre(tower2))
+tower3.addEventListener("click", descobrirTorre(tower3))
+
 //função pra avaliar se tem filhos
 function temFilho(retorno){
    return retorno.children.length!== 0
 }
 
-//função de clique
-const discoAtual = tower1.addEventListener("click", function(){
-    let verificar = temFilho(tower1)
-    let newArr = tower1.children
-    let ultima
-    if (verificar === true){
-        ultima = newArr[newArr.length -1]
-    } else {
-        console.log("não tem disco")
-    }
-    console.log(ultima)
-    return ultima
-})
-
-tower2.addEventListener("click", function(){
-    console.log(discoAtual)
-})
-
+//função que retorna o último filho
+function ultimo(tow){
+    return tow.lastElementChild
+}
 
 
 // yellowDisk.addEventListener("click", function(){
@@ -66,3 +62,17 @@ tower2.addEventListener("click", function(){
 //clicar numa torre pra adicionar esse elemento
 //elementos maiores não podem ser inseridos em cima de elementos menores
 //não pode mover elementos que estão numa posição abaixo de outro
+
+
+// const discoAtual = tower1.addEventListener("click", function(){
+//     let verificar = temFilho(tower1)
+//     let newArr = tower1.children
+//     let ultima
+//     if (verificar === true){
+//         ultima = newArr[newArr.length -1]
+//     } else {
+//         console.log("não tem disco")
+//     }
+//     console.log(ultima)
+//     return ultima
+// })
