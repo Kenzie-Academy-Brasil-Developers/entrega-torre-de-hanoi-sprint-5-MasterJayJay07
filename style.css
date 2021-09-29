@@ -1,5 +1,5 @@
 /* torres para inserir os discos */
-#torres{
+#container_torres{
     display: flex;
     flex-direction: row;
     justify-content: center;
