@@ -23,6 +23,9 @@
 .disco {
     border-radius: 5px;
 }
+.disco:active{
+  background-color: orange;
+}
 .disco::after {
     content: "#";
 }
