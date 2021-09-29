@@ -2,7 +2,7 @@
 const tower1 = document.getElementById("torre1")
 const tower2 = document.getElementById("torre2")
 const tower3 = document.getElementById("torre3")
-let towers = document.getElementsByClassName("torre")
+const towers = document.getElementsByClassName("torre")
 
 //variáveis com os discos
 const redDisk = document.querySelector(".dVermelho")
@@ -11,23 +11,35 @@ const blueDisk = document.querySelector(".dAzul")
 const yellowDisk = document.querySelector(".dAmarelo")
 
 //função para descobrir a torre clicada
-function descobrirTorre(e){
-    let torreAtual = e.currentTarget
-    console.log(e.currentTarget)
-    return torreAtual
-}
-tower1.addEventListener("click", descobrirTorre(tower1))
-tower2.addEventListener("click", descobrirTorre(tower2))
-tower3.addEventListener("click", descobrirTorre(tower3))
+tower1.addEventListener("click", pegarTorre)
+tower2.addEventListener("click", pegarTorre)
+tower3.addEventListener("click", pegarTorre)
+
+function pegarTorre(evt){ 
+   console.log(evt.currentTarget)
+   const torre = evt.currentTarget
+} 
 
 //função pra avaliar se tem filhos
 function temFilho(retorno){
    return retorno.children.length!== 0
 }
 
+//função que diz quantos discos tem na torre
+function quantosDiscos(evt){
+    console.log(evt.childElementCount)
+    const numerosDeDiscos = evt.childElementCount
+}
+
 //função que retorna o último filho
-function ultimo(tow){
-    return tow.lastElementChild
+function ultimo(evt){
+    console.log(evt.lastElementChild)
+    const disco = evt.lastElementChild
+}
+
+//função que move os discos
+function moverDisco(torre,disco){
+    torre.appendChild(disco)
 }
 
 
