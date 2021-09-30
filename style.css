@@ -1,18 +1,40 @@
+body{
+    background-color: steelblue;
+}
+#titulo{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#regras{
+    background-color: aliceblue;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
 /* torres para inserir os discos */
 #container_torres{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: aliceblue;
+    border-radius:10px
 }
 .torre {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    background-color: black;
-    width: 10px;
-    height: 100px;
-    margin: 40px;
+    width: 33%;
+    height: 200px;
+    margin: 10px;
+    border: 2px solid steelblue;
+    border-radius: 5px;
+    padding: 2px;
 }
 .torre::after {
     content: "  ";
@@ -23,29 +45,42 @@
 .disco {
     border-radius: 5px;
 }
-.disco:active{
-  background-color: orange;
-}
 .disco::after {
     content: "#";
 }
 .dVermelho{ 
-    background-color: red;
-    color: red;
-    width: 80px;
+    background-color: tomato;
+    color: tomato;
+    width: 80%;
+    height: 20%;
 }
 .dVerde{ 
-    background-color: green;
-    color: green;
-    width: 70px;
+    background-color: seagreen;
+    color: seagreen;
+    width: 65%;
+    height: 20%;
 }
 .dAzul{ 
-    background-color: blue;
-    color: blue;
-    width: 60px
+    background-color: royalblue;
+    color: royalblue;
+    width: 50%;
+    height: 20%;
 }
 .dAmarelo{ 
-    background-color: yellow;
-    color: yellow;
-    width: 50px;
+    background-color: gold;
+    color: gold;
+    width: 35%;
+    height: 20%;
+}
+#botao_reset{
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+}
+@media (min-width:1020px){
+    #container_torres{
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
