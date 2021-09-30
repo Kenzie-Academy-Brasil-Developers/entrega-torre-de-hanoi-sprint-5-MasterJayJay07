@@ -73,6 +73,12 @@ body{
     height: 20%;
 }
 
+#botao_reset{
+    margin: 5px;
+    border: none;
+    border-radius: 2px;
+}
+
 @media (min-width:1020px){
     #container_torres{
         width: 1000px;
